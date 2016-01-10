@@ -1,0 +1,18 @@
+<div>
+  <input type="input" value="Search" ng-model="search">
+</div>
+
+<div>
+  <ul>
+    <li ng-repeat="book in books | filter:search">
+      <span>
+        <a href="#/books/{{book.id}}">
+          <h2>{{ book.title}}</h2>
+        </a>
+        {{ book.author }}
+      </span>
+      <p> {{ book.description}} </p>
+    </li>
+  </ul>
+
+</div>
